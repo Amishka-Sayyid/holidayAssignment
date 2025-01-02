@@ -1,0 +1,38 @@
+@import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Quintessential&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+/*  font-size: 1.5rem;
+  font-family: "Quintessential", serif;
+  font-weight: 400;
+  font-style: normal; */
+
+#part1 {
+  background-color: bisque;
+  width: 100%;
+  height: 100vh;
+  margin: auto;
+}
+#part2 {
+  background-color: rgb(196, 215, 255);
+  width: 100%;
+  height: 100vh;
+  margin: auto;
+}
+#part3 {
+  background-color: rgb(160, 125, 83);
+  width: 100%;
+  height: 100vh;
+  margin: auto;
+}
+#part4 {
+  background-color: rgb(181, 93, 149);
+  width: 100%;
+  height: 100vh;
+  margin: auto;
+}
