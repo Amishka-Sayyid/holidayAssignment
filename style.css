@@ -43,8 +43,22 @@
   display: flex;
   flex-direction: column;
   height: 20vh;
-  width: 50vh;
+  width: 60vh;
   background-color: aliceblue;
   float: right;
   color: black;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0.5rem;
+  border-radius: 5rem;
+  font-family: "Quintessential", serif;
+  font-size: 1.2rem;
+}
+#quoteApi h2 {
+  text-decoration: underline;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+#quoteApi h4 {
+  font-family: cursive;
 }

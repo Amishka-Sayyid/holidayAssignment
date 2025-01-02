@@ -52,9 +52,6 @@ function displayQuoteContent(quote, author) {
   quoteParagraph.textContent = quote;
   authorPart.textContent = author;
 
-  quoteParagraph.className = "quoteStyle";
-  authorPart.className = "authorStyle";
-
   quoteContainer.appendChild(quoteParagraph);
   quoteContainer.appendChild(authorPart);
 }
