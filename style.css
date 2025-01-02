@@ -13,7 +13,6 @@
   font-style: normal; */
 
 #part1 {
-  background-color: bisque;
   width: 100%;
   height: 100vh;
   margin: auto;
@@ -44,7 +43,7 @@
   flex-direction: column;
   height: 20vh;
   width: 60vh;
-  background-color: aliceblue;
+  background-color: rgb(191, 214, 234);
   float: right;
   color: black;
   justify-content: space-around;
@@ -61,4 +60,13 @@
 }
 #quoteApi h4 {
   font-family: cursive;
+}
+
+@media (max-width: 600px) {
+  #quoteApi {
+    height: 17vh;
+    width: 90%;
+    float: none;
+    margin: auto;
+  }
 }

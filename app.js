@@ -32,7 +32,7 @@ async function getApi() {
     author = result.author || "unknown";
   } catch (error) {
     console.error(error);
-    const datanew = await response2.text();
+    const datanew = await response.text();
     const parts = datanew.split(" - ");
     quote = parts[0];
     author = parts.length > 1 ? parts[1] : "Unknown";
