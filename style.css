@@ -36,3 +36,15 @@
   height: 100vh;
   margin: auto;
 }
+
+/* 1st part */
+/* random quotes  */
+#quoteApi {
+  display: flex;
+  flex-direction: column;
+  height: 20vh;
+  width: 50vh;
+  background-color: aliceblue;
+  float: right;
+  color: black;
+}
