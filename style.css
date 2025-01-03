@@ -16,6 +16,9 @@
   width: 100%;
   height: 100vh;
   margin: auto;
+  background-image: url(./canvaImage.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 #part2 {
   background-color: rgb(196, 215, 255);
@@ -41,9 +44,9 @@
 #quoteApi {
   display: flex;
   flex-direction: column;
-  height: 20vh;
+  height: 14vh;
   width: 60vh;
-  background-color: rgb(191, 214, 234);
+  background-color: rgb(229, 223, 222);
   float: right;
   color: black;
   justify-content: space-around;
@@ -51,7 +54,7 @@
   margin: 0.5rem;
   border-radius: 5rem;
   font-family: "Quintessential", serif;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 #quoteApi h2 {
   text-decoration: underline;
@@ -64,9 +67,18 @@
 
 @media (max-width: 600px) {
   #quoteApi {
-    height: 17vh;
+    height: 14vh;
     width: 90%;
     float: none;
     margin: auto;
+  }
+  #part1 {
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+    background-image: url(./canvaImageSmall.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right bottom;
   }
 }
