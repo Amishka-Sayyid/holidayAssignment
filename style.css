@@ -40,13 +40,21 @@
 }
 
 /* 1st part */
+/* logo */
+#part1 img {
+  float: left;
+  height: 17vh;
+  width: 17vh;
+  object-fit: contain;
+  border-radius: 5rem;
+}
 /* random quotes  */
 #quoteApi {
   display: flex;
   flex-direction: column;
   height: 14vh;
   width: 60vh;
-  background-color: rgb(229, 223, 222);
+  background-color: rgb(237, 210, 210);
   float: right;
   color: black;
   justify-content: space-around;
@@ -68,10 +76,18 @@
 @media (max-width: 600px) {
   #quoteApi {
     height: 14vh;
-    width: 90%;
-    float: none;
+    width: 70%;
+    float: right;
     margin: auto;
   }
+  #part1 img {
+    height: 14vh;
+    float: left;
+    width: 20%;
+    object-fit: contain;
+    border-radius: 5rem;
+  }
+
   #part1 {
     width: 100%;
     height: 100vh;
