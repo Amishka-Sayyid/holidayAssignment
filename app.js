@@ -66,4 +66,11 @@ async function displayQuote() {
 }
 
 //call final function to initiate it
-displayQuote();
+//added a settimeout so when the time reaches zero the content will appear
+setTimeout(displayQuote, 2000);
+
+//logo to appear after 2seconds
+const logo = document.getElementById("logo");
+setTimeout(function () {
+  logo.style.display = "block";
+}, 2000);
