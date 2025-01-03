@@ -88,15 +88,29 @@
 }
 @media (max-width: 600px) {
   #quoteApi {
-    height: 13vh;
-    width: 70%;
+    height: 14vh;
+    font-size: 1.7rem;
     margin: auto;
+    text-align: center;
   }
   #part1 img {
-    height: 14vh;
-    width: 20%;
+    height: 10vh;
     object-fit: contain;
-    border-radius: 5rem;
+    border-radius: 8rem;
+    margin: auto;
+  }
+  #logoandquote {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-image: linear-gradient(
+      to top,
+      rgb(117, 187, 201),
+      rgb(232, 193, 163, 0)
+    );
   }
 
   #part1 {
