@@ -3,8 +3,6 @@
 //fetch api
 //step 1 getapi
 
-const part1 = document.getElementById("part1");
-
 const url =
   "https://quotes-inspirational-quotes-motivational-quotes.p.rapidapi.com/quote?token=ipworld.info";
 const options = {
@@ -64,10 +62,13 @@ async function displayQuote() {
   //display it using the quote function
   displayQuoteContent(quote, author);
 }
-
 //call final function to initiate it
-//added a settimeout so when the time reaches zero the content will appear
-setTimeout(displayQuote, 2000);
+displayQuote();
+
+//added a settimeout so when the time reaches zero the quoteContainer will appear
+setTimeout(function () {
+  quoteContainer.style.display = "flex";
+}, 2000);
 
 //logo to appear after 2seconds
 const logo = document.getElementById("logo");

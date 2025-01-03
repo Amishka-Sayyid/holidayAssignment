@@ -14,11 +14,16 @@
 
 #part1 {
   width: 100%;
-  height: 100vh;
+  height: 83vh;
   margin: auto;
-  background-image: url(./canvaImage.png);
+  /* background-image: url(./canvaImage.png);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
+  background-image: linear-gradient(
+    180deg,
+    rgb(117, 187, 201),
+    rgb(232, 193, 163, 0)
+  );
 }
 #part2 {
   background-color: rgb(196, 215, 255);
@@ -39,10 +44,18 @@
   margin: auto;
 }
 
-/* 1st part */
 /* logo */
-#part1 img {
-  float: left;
+#logoandquote {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-image: linear-gradient(
+    to top,
+    rgb(117, 187, 201),
+    rgb(232, 193, 163, 0)
+  );
+}
+#logo {
   height: 17vh;
   width: 17vh;
   object-fit: contain;
@@ -53,10 +66,9 @@
 #quoteApi {
   display: flex;
   flex-direction: column;
-  height: 14vh;
+  height: 17vh;
   width: 60vh;
-  background-color: rgb(237, 210, 210);
-  float: right;
+  background-blend-mode: hue;
   color: black;
   justify-content: space-around;
   align-items: center;
@@ -64,6 +76,7 @@
   border-radius: 5rem;
   font-family: "Quintessential", serif;
   font-size: 1rem;
+  display: none;
 }
 #quoteApi h2 {
   text-decoration: underline;
@@ -73,17 +86,14 @@
 #quoteApi h4 {
   font-family: cursive;
 }
-
 @media (max-width: 600px) {
   #quoteApi {
-    height: 14vh;
+    height: 13vh;
     width: 70%;
-    float: right;
     margin: auto;
   }
   #part1 img {
     height: 14vh;
-    float: left;
     width: 20%;
     object-fit: contain;
     border-radius: 5rem;
@@ -93,9 +103,14 @@
     width: 100%;
     height: 100vh;
     margin: auto;
-    background-image: url(./canvaImageSmall.png);
+    /* background-image: url(./canvaImageSmall.png);
     background-repeat: no-repeat;
-    background-size: contain;
-    background-position: right bottom;
+    background-size: contain; */
+    background-image: linear-gradient(
+      180deg,
+      rgb(117, 187, 201),
+      rgb(232, 193, 163, 0)
+    );
+    /* background-position: right bottom; */
   }
 }
