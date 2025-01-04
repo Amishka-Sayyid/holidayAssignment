@@ -76,12 +76,13 @@ setTimeout(function () {
   logo.style.display = "block";
 }, 2000);
 
-//https://rickriordan.com/resource/the-lightning-thief-rationale-incomplete/
-//https://simple.wikipedia.org/wiki/The_Lightning_Thief#:~:text=Percy%20is%20the%20son%20of,Zeus%2C%20Poseidon%2C%20and%20Hades.&text=Rick%20Riordan%20finished%20writing%20his,by%20Bantam%20Books%20in%201997.
+//storing objects
 
-const novelTitle = "The Lightning Thief";
+let novelTitle = "Percy Jackson and the olympians: The Lightning Thief";
+
 const summary =
   " The Lightning Thief is a 2005 American fantasy-adventure novel based on Greek mythology, the first children's novel by Rick Riordan. The opening installment in the series Percy Jackson & the Olympians, the book was recognized among the year's best for children. Riordan followed the novel with various books and spin-off series, spawning the Camp Half-Blood Chronicles media franchise. A film adaptation of the book was theatrically released in the United States on February 12, 2010. The Disney+ series Percy Jackson and the Olympians adapted The Lightning Thief in its first season, which ran from December 19, 2023 to January 30, 2024. ";
+
 const aboutBook =
   "Twelve-year-old Percy Jackson is on the most dangerous quest of his life. With the help of a satyr and a daughter of Athena, Percy must journey across the United States to catch a thief who has stolen the original weapon of mass destruction — Zeus’ master bolt. Along the way, he must face a host of mythological enemies determined to stop him. Most of all, he must come to terms with a father he has never known, and an Oracle that has warned him of betrayal by a friend.";
 
@@ -109,3 +110,42 @@ const images = [
 ];
 //part 1
 const part1 = document.getElementById("part1");
+
+function part1Elements() {
+  const imageDiv = document.createElement("div");
+  imageDiv.className = "part1ImageDiv";
+  const BookImage = document.createElement("img");
+  BookImage.src = "./image1.jpg";
+  BookImage.alt = "percy jackson the lightining thief book cover";
+
+  imageDiv.appendChild(BookImage);
+
+  const TitleDiv = document.createElement("div");
+  TitleDiv.className = "part1TitleDiv";
+
+  const heading = document.createElement("h1");
+  heading.textContent = novelTitle;
+
+  const author = document.createElement("h3");
+  author.textContent = "Rick Riordan";
+
+  const link = document.createElement("a");
+  link.textContent = "Read More";
+  link.className = "part1link";
+  link.addEventListener("click", function (event) {
+    //to prevent it from jumping directly to the location
+    event.preventDefault();
+    //to scroll to #part2 with a smooth behaviour
+    part2.scrollIntoView({ behavior: "smooth" });
+  });
+
+  TitleDiv.appendChild(heading);
+  TitleDiv.appendChild(author);
+  TitleDiv.appendChild(link);
+
+  part1.appendChild(imageDiv);
+  part1.appendChild(TitleDiv);
+}
+
+part1Elements();
+const part2 = document.getElementById("part2");

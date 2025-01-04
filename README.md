@@ -33,3 +33,11 @@ _Requirements _
     🐿️ Use media queries to make your website responsive.
 
     🐿️ If there is another topic you want to revise (forms, APIs, timers, local storage...), add it to your website!
+
+**references**
+
+-https://simple.wikipedia.org/wiki/The_Lightning_Thief#:~:text=Percy%20is%20the%20son%20of,Zeus%2C%20Poseidon%2C%20and%20Hades.&text=Rick%20Riordan%20finished%20writing%20his,by%20Bantam%20Books%20in%201997.
+
+-https://www.sparknotes.com/lit/lightning-thief/summary/
+
+-https://rickriordan.com/book/the-lightning-thief/
