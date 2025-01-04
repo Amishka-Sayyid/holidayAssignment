@@ -26,19 +26,21 @@
   );
 }
 #part2 {
-  background-color: rgb(196, 215, 255);
+  background-image: linear-gradient(
+    to top,
+    rgb(117, 201, 198),
+    rgb(232, 193, 163, 0)
+  );
   width: 100%;
   height: 100vh;
   margin: auto;
 }
 #part3 {
-  background-color: rgb(160, 125, 83);
-  width: 100%;
-  height: 100vh;
-  margin: auto;
-}
-#part4 {
-  background-color: rgb(181, 93, 149);
+  background-image: linear-gradient(
+    to bottom,
+    rgb(117, 201, 198),
+    rgb(232, 193, 163, 0)
+  );
   width: 100%;
   height: 100vh;
   margin: auto;

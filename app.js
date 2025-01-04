@@ -75,3 +75,7 @@ const logo = document.getElementById("logo");
 setTimeout(function () {
   logo.style.display = "block";
 }, 2000);
+
+//part1
+
+const part1 = document.getElementById("part1");
