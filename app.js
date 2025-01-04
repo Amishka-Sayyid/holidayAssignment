@@ -76,6 +76,36 @@ setTimeout(function () {
   logo.style.display = "block";
 }, 2000);
 
-//part1
+//https://rickriordan.com/resource/the-lightning-thief-rationale-incomplete/
+//https://simple.wikipedia.org/wiki/The_Lightning_Thief#:~:text=Percy%20is%20the%20son%20of,Zeus%2C%20Poseidon%2C%20and%20Hades.&text=Rick%20Riordan%20finished%20writing%20his,by%20Bantam%20Books%20in%201997.
 
+const novelTitle = "The Lightning Thief";
+const summary =
+  " The Lightning Thief is a 2005 American fantasy-adventure novel based on Greek mythology, the first children's novel by Rick Riordan. The opening installment in the series Percy Jackson & the Olympians, the book was recognized among the year's best for children. Riordan followed the novel with various books and spin-off series, spawning the Camp Half-Blood Chronicles media franchise. A film adaptation of the book was theatrically released in the United States on February 12, 2010. The Disney+ series Percy Jackson and the Olympians adapted The Lightning Thief in its first season, which ran from December 19, 2023 to January 30, 2024. ";
+const aboutBook =
+  "Twelve-year-old Percy Jackson is on the most dangerous quest of his life. With the help of a satyr and a daughter of Athena, Percy must journey across the United States to catch a thief who has stolen the original weapon of mass destruction — Zeus’ master bolt. Along the way, he must face a host of mythological enemies determined to stop him. Most of all, he must come to terms with a father he has never known, and an Oracle that has warned him of betrayal by a friend.";
+
+const images = [
+  {
+    src: "./novelPics/lightning thief.jpg",
+    alt: "the picture of the book cover of the ligtining thief novel",
+  },
+  {
+    src: "./novelPics/sea of monsters.jpg",
+    alt: "the picture of the book cover of the sea of monsters novel",
+  },
+  {
+    src: "./novelPics/the titans curse.jpg",
+    alt: "the picture of the book cover of The Titan's Curse novel",
+  },
+  {
+    src: "./novelPics/battle of labyrinth.jpg",
+    alt: "the picture of the book cover of The Battle of the Labyrinth novel",
+  },
+  {
+    src: "./novelPics/the last olympian.jpg",
+    alt: "the picture of the book cover of The Last Olympian novel",
+  },
+];
+//part 1
 const part1 = document.getElementById("part1");
