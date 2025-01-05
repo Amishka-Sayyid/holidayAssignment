@@ -3,67 +3,67 @@
 //fetch api
 //step 1 getapi
 
-const url =
-  "https://quotes-inspirational-quotes-motivational-quotes.p.rapidapi.com/quote?token=ipworld.info";
-const options = {
-  method: "GET",
-  headers: {
-    "x-rapidapi-key": "113c364abamsh56dec0b45d4deb3p1c5155jsna0cda7243a30",
-    "x-rapidapi-host":
-      "quotes-inspirational-quotes-motivational-quotes.p.rapidapi.com",
-  },
-};
+// const url =
+//   "https://quotes-inspirational-quotes-motivational-quotes.p.rapidapi.com/quote?token=ipworld.info";
+// const options = {
+//   method: "GET",
+//   headers: {
+//     "x-rapidapi-key": "113c364abamsh56dec0b45d4deb3p1c5155jsna0cda7243a30",
+//     "x-rapidapi-host":
+//       "quotes-inspirational-quotes-motivational-quotes.p.rapidapi.com",
+//   },
+// };
 
-async function getApi() {
-  const response = await fetch(url, options);
-  console.log(response);
-  if (!response.ok) {
-    throw new Error("Network response was not ok");
-  }
+// async function getApi() {
+//   const response = await fetch(url, options);
+//   console.log(response);
+//   if (!response.ok) {
+//     throw new Error("Network response was not ok");
+//   }
 
-  let quote = "no quote available",
-    author = "unknown";
+//   let quote = "no quote available",
+//     author = "unknown";
 
-  try {
-    const result = await response.json();
-    quote = result.text;
-    author = result.author || "unknown";
-  } catch (error) {
-    console.error(error);
-    const datanew = await response.text();
-    const parts = datanew.split(" - ");
-    quote = parts[0];
-    author = parts.length > 1 ? parts[1] : "Unknown";
-  }
+//   try {
+//     const result = await response.json();
+//     quote = result.text;
+//     author = result.author || "unknown";
+//   } catch (error) {
+//     console.error(error);
+//     const datanew = await response.text();
+//     const parts = datanew.split(" - ");
+//     quote = parts[0];
+//     author = parts.length > 1 ? parts[1] : "Unknown";
+//   }
 
-  return { quote, author };
-}
+//   return { quote, author };
+// }
 
-//step 2 create element and append
+// //step 2 create element and append
 
-const quoteContainer = document.getElementById("quoteApi");
+// const quoteContainer = document.getElementById("quoteApi");
 
-function displayQuoteContent(quote, author) {
-  const quoteParagraph = document.createElement("p");
-  const authorPart = document.createElement("h4");
+// function displayQuoteContent(quote, author) {
+//   const quoteParagraph = document.createElement("p");
+//   const authorPart = document.createElement("h4");
 
-  quoteParagraph.textContent = quote;
-  authorPart.textContent = author;
+//   quoteParagraph.textContent = quote;
+//   authorPart.textContent = author;
 
-  quoteContainer.appendChild(quoteParagraph);
-  quoteContainer.appendChild(authorPart);
-}
+//   quoteContainer.appendChild(quoteParagraph);
+//   quoteContainer.appendChild(authorPart);
+// }
 
-//step 3 combine
+// //step 3 combine
 
-async function displayQuote() {
-  // Get the quote and author from the API
-  const { quote, author } = await getApi();
-  //display it using the quote function
-  displayQuoteContent(quote, author);
-}
-//call final function to initiate it
-displayQuote();
+// async function displayQuote() {
+//   // Get the quote and author from the API
+//   const { quote, author } = await getApi();
+//   //display it using the quote function
+//   displayQuoteContent(quote, author);
+// }
+// //call final function to initiate it
+// displayQuote();
 
 //added a settimeout so when the time reaches zero the quoteContainer will appear
 setTimeout(function () {
@@ -86,28 +86,6 @@ let summary =
 let aboutBook =
   "Twelve-year-old Percy Jackson is on the most dangerous quest of his life. With the help of a satyr and a daughter of Athena, Percy must journey across the United States to catch a thief who has stolen the original weapon of mass destruction — Zeus’ master bolt. Along the way, he must face a host of mythological enemies determined to stop him. Most of all, he must come to terms with a father he has never known, and an Oracle that has warned him of betrayal by a friend.";
 
-const images = [
-  {
-    src: "./novelPics/lightning thief.jpg",
-    alt: "the picture of the book cover of the ligtining thief novel",
-  },
-  {
-    src: "./novelPics/sea of monsters.jpg",
-    alt: "the picture of the book cover of the sea of monsters novel",
-  },
-  {
-    src: "./novelPics/the titans curse.jpg",
-    alt: "the picture of the book cover of The Titan's Curse novel",
-  },
-  {
-    src: "./novelPics/battle of labyrinth.jpg",
-    alt: "the picture of the book cover of The Battle of the Labyrinth novel",
-  },
-  {
-    src: "./novelPics/the last olympian.jpg",
-    alt: "the picture of the book cover of The Last Olympian novel",
-  },
-];
 //part 1
 const part1 = document.getElementById("part1");
 
@@ -148,6 +126,9 @@ function part1Elements() {
 }
 
 part1Elements();
+
+// part2
+
 const part2 = document.getElementById("part2");
 
 function part2Elements() {
@@ -172,6 +153,10 @@ function part2Elements() {
   const moreLink = document.createElement("a");
   moreLink.textContent = "Find More Books";
   moreLink.className = "part2Link";
+  moreLink.addEventListener("click", function (event) {
+    event.preventDefault();
+    part3.scrollIntoView({ behavior: "smooth" });
+  });
 
   summaryDiv.appendChild(summaryHeading);
   summaryDiv.appendChild(summaryDetails);
@@ -181,3 +166,30 @@ function part2Elements() {
   part2.appendChild(summaryDiv);
 }
 part2Elements();
+
+// part 3
+const part3 = document.getElementById("part3");
+const images = [
+  {
+    src: "./novelPics/lightning thief.jpg",
+    alt: "the picture of the book cover of the ligtining thief novel",
+  },
+  {
+    src: "./novelPics/sea of monsters.jpg",
+    alt: "the picture of the book cover of the sea of monsters novel",
+  },
+  {
+    src: "./novelPics/the titans curse.jpg",
+    alt: "the picture of the book cover of The Titan's Curse novel",
+  },
+  {
+    src: "./novelPics/battle of labyrinth.jpg",
+    alt: "the picture of the book cover of The Battle of the Labyrinth novel",
+  },
+  {
+    src: "./novelPics/the last olympian.jpg",
+    alt: "the picture of the book cover of The Last Olympian novel",
+  },
+];
+
+function part3Elements() {}
