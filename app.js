@@ -192,4 +192,20 @@ const images = [
   },
 ];
 
-function part3Elements() {}
+function part3Elements(imagesArray) {
+  const booksDiv = document.createElement("div");
+  booksDiv.className = "books";
+
+  imagesArray.forEach(function (imageData) {
+    const booksImg = document.createElement("img");
+    booksImg.src = imageData.src;
+    booksImg.alt = imageData.alt;
+
+    booksImg.className = "booksImg";
+
+    booksDiv.appendChild(booksImg);
+    part3.appendChild(booksDiv);
+  });
+}
+
+part3Elements(images);
