@@ -41,3 +41,25 @@ _Requirements _
 -https://www.sparknotes.com/lit/lightning-thief/summary/
 
 -https://rickriordan.com/book/the-lightning-thief/
+
+**reflection**
+
+in this website i utilised the folllowing concepts learnt in class
+
+javascript
+
+    -event listeners
+    -dom manipulation
+    -apis
+    -timers
+    -dev tools
+    -arrays
+    -functions
+    -objects
+
+css
+
+    -media queries
+    -flex-box
+
+html
