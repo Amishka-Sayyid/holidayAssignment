@@ -171,11 +171,11 @@ part2Elements();
 const part3 = document.getElementById("part3");
 const images = [
   {
-    src: "./novelPics/lightning thief.jpg",
+    src: "./image1.jpg",
     alt: "the picture of the book cover of the ligtining thief novel",
   },
   {
-    src: "./novelPics/sea of monsters.jpg",
+    src: "./novelPics/sea of monsters (2).jpg",
     alt: "the picture of the book cover of the sea of monsters novel",
   },
   {
@@ -206,6 +206,17 @@ function part3Elements(imagesArray) {
     booksDiv.appendChild(booksImg);
     part3.appendChild(booksDiv);
   });
+
+  const nextLink = document.createElement("a");
+  nextLink.textContent = "more exciting details";
+  nextLink.className = "part3Link";
+  nextLink.addEventListener("click", function () {
+    part4.scrollIntoView({ behavior: "smooth" });
+  });
+
+  part3.appendChild(nextLink);
 }
 
 part3Elements(images);
+
+const part4 = document.getElementById("part4");

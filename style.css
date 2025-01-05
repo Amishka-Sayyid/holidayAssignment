@@ -182,6 +182,10 @@
   width: 100%;
   height: 100vh;
   margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 #part3 h2 {
   text-align: center;
@@ -190,33 +194,76 @@
   font-family: "Quintessential", serif;
   font-weight: 400;
   font-style: normal;
-}
-#part3 h2::after {
-  content: " ";
+  padding: 1.5rem;
   text-decoration: underline;
-  width: 90vh;
-  text-align: center;
-  position: absolute;
-  display: block;
-  color: black;
-  margin: auto;
 }
 
 .books {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   height: 60vh;
-  width: 40vh;
-  justify-content: space-around;
+  width: 100%;
   margin: auto;
   border-radius: 2rem;
-  object-fit: contain;
+  object-fit: fill;
+  justify-content: space-around;
+  /* flex-wrap: wrap; */
+  margin-top: 2rem;
 }
 .booksImg {
-  height: 60vh;
+  display: block;
+  height: 50vh;
   width: 40vh;
   object-fit: contain;
+}
+
+.part3Link {
+  text-decoration: none;
+  color: rgb(252, 252, 252);
+  background-color: rgb(194, 170, 227);
+  border-radius: 3rem;
+  padding: 2rem;
+  margin: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+  float: right;
+}
+
+/* part4 */
+#part4 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 80vh;
+  align-items: center;
+}
+#part4 div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  color: rgb(73, 72, 72);
+  height: 70vh;
+  width: 60vh;
+  border-radius: 2rem;
+  align-items: center;
+  font-size: 1.5rem;
+  padding: 1rem;
+  background-image: linear-gradient(#a5d7e1, #afe3da);
+}
+#part4 h1 {
+  font-family: "Quintessential", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+}
+
+#part4 a {
+  color: rgb(240, 97, 121);
+  text-decoration: none;
+}
+#part4 a:hover {
+  color: rgb(145, 119, 185);
 }
 
 @media (max-width: 600px) {
@@ -299,5 +346,36 @@
     font-size: 1rem;
     padding: 1rem;
     margin: auto;
+  }
+  #part3 {
+    flex-direction: column;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  #part3 h2 {
+    padding: 1rem;
+  }
+  .books {
+    gap: 1rem;
+    margin-top: 0;
+    margin: auto;
+    height: 130vh;
+  }
+  .booksImg {
+    display: block;
+    height: 40vh;
+    width: 30vh;
+    object-fit: contain;
+    margin: auto;
+  }
+  #part4 {
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    margin: auto;
+    height: 100vh;
+    align-items: center;
+    gap: 2rem;
   }
 }
