@@ -80,10 +80,10 @@ setTimeout(function () {
 
 let novelTitle = "Percy Jackson and the olympians: The Lightning Thief";
 
-const summary =
+let summary =
   " The Lightning Thief is a 2005 American fantasy-adventure novel based on Greek mythology, the first children's novel by Rick Riordan. The opening installment in the series Percy Jackson & the Olympians, the book was recognized among the year's best for children. Riordan followed the novel with various books and spin-off series, spawning the Camp Half-Blood Chronicles media franchise. A film adaptation of the book was theatrically released in the United States on February 12, 2010. The Disney+ series Percy Jackson and the Olympians adapted The Lightning Thief in its first season, which ran from December 19, 2023 to January 30, 2024. ";
 
-const aboutBook =
+let aboutBook =
   "Twelve-year-old Percy Jackson is on the most dangerous quest of his life. With the help of a satyr and a daughter of Athena, Percy must journey across the United States to catch a thief who has stolen the original weapon of mass destruction — Zeus’ master bolt. Along the way, he must face a host of mythological enemies determined to stop him. Most of all, he must come to terms with a father he has never known, and an Oracle that has warned him of betrayal by a friend.";
 
 const images = [
@@ -149,3 +149,35 @@ function part1Elements() {
 
 part1Elements();
 const part2 = document.getElementById("part2");
+
+function part2Elements() {
+  const aboutDiv = document.createElement("div");
+  aboutDiv.className = "part2aboutdiv";
+  const summaryDiv = document.createElement("div");
+  summaryDiv.className = "part2summarydiv";
+
+  const aboutHeading = document.createElement("h2");
+  aboutHeading.textContent = "About the book";
+  const about = document.createElement("p");
+  about.textContent = aboutBook;
+
+  aboutDiv.appendChild(aboutHeading);
+  aboutDiv.appendChild(about);
+
+  const summaryHeading = document.createElement("h2");
+  summaryHeading.textContent = "details of the book";
+  const summaryDetails = document.createElement("p");
+  summaryDetails.textContent = summary;
+
+  const moreLink = document.createElement("a");
+  moreLink.textContent = "Find More Books";
+  moreLink.className = "part2Link";
+
+  summaryDiv.appendChild(summaryHeading);
+  summaryDiv.appendChild(summaryDetails);
+  summaryDiv.appendChild(moreLink);
+
+  part2.appendChild(aboutDiv);
+  part2.appendChild(summaryDiv);
+}
+part2Elements();
