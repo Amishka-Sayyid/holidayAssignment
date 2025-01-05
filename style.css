@@ -266,6 +266,39 @@
   color: rgb(145, 119, 185);
 }
 
+/* gotopbtn */
+.gotopbtn {
+  font-size: 1.3rem;
+  color: rgb(124, 93, 83);
+  border: 1px solid rgb(124, 93, 83);
+  padding: 1rem;
+  border-radius: 4rem;
+  margin: auto;
+  position: fixed;
+  right: 5px;
+  bottom: 2rem;
+  z-index: 2;
+  text-align: center;
+}
+/* footer */
+footer {
+  font-size: 1.6rem;
+  text-align: center;
+  padding: 1rem;
+  margin: auto;
+  color: rgb(110, 110, 110);
+  background-image: linear-gradient(
+    to top,
+    rgb(117, 187, 201),
+    rgb(232, 193, 163, 0)
+  );
+}
+footer a {
+  color: rgb(240, 97, 121);
+  height: 60px;
+  text-decoration: none;
+}
+
 @media (max-width: 600px) {
   #quoteApi {
     height: 25vh;
