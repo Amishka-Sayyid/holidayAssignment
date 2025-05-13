@@ -1,0 +1,36 @@
+@media (max-width: 768px) {
+  #part1 {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .part1ImageDiv,
+  .part1TitleDiv {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .part1ImageDiv img {
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
+  }
+
+  #part2 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .part2aboutdiv,
+  .part2summarydiv {
+    width: 100%;
+  }
+
+  #part4 {
+    flex-direction: column;
+  }
+
+  #part4 div {
+    width: 100%;
+  }
+}

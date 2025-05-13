@@ -5,7 +5,6 @@
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  font-family: "Playfair Display", serif;
 }
 h1,
 h2,
@@ -19,11 +18,13 @@ p {
 h1 {
   font-weight: 700;
   font-size: clamp(2.5rem, 6vw, 4rem);
+  text-transform: capitalize;
 }
 
 h2 {
   font-weight: 600;
   font-size: clamp(2rem, 5vw, 3rem);
+  text-transform: capitalize;
 }
 
 p,
@@ -41,6 +42,173 @@ section {
   );
   background-repeat: no-repeat;
 
-  min-height: 100%vh;
-  min-width: 100%vw;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* section 1 intro */
+#part1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  min-height: 80vh;
+}
+.part1ImageDiv {
+  flex: 1;
+}
+.part1ImageDiv img {
+  height: 100%;
+  width: 100%;
+  object-fit: fill;
+}
+.part1TitleDiv {
+  flex: 1;
+  padding: 30px;
+}
+
+a {
+  text-align: center;
+  display: inline-block;
+  padding: 0.7rem 0.6rem;
+  border-radius: 1rem;
+  margin: 0.5rem;
+  background-color: rgba(117, 187, 201, 1);
+  color: white;
+  white-space: nowrap;
+}
+a:hover {
+  background-color: rgba(117, 187, 201, 0.8);
+  color: white;
+}
+
+/* section 3 more books */
+#part3 h2 {
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.books {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  margin: 2rem auto;
+  border-radius: 2rem;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.booksImg {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* gotopbtn */
+.gotopbtn {
+  color: rgb(124, 93, 83);
+  padding: 1rem;
+  border-radius: 4rem;
+  width: 3rem;
+  position: fixed;
+  left: 5px;
+  bottom: 2rem;
+  z-index: 100;
+  text-align: center;
+  background-color: whitesmoke;
+  box-sizing: border-box;
+}
+/* footer */
+footer {
+  min-height: 20%;
+  text-align: center;
+
+  margin: auto;
+  color: rgb(110, 110, 110);
+
+  position: relative;
+  width: 100%;
+}
+footer a {
+  color: rgb(95, 97, 98);
+  text-decoration: none;
+  background-color: transparent;
+}
+
+/* section 2 about and detail */
+
+#part2 {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 2rem;
+  min-height: 70vh;
+  background-image: linear-gradient(
+    to top,
+    rgba(255, 255, 255, 1),
+    rgba(117, 187, 201, 1),
+    rgba(255, 255, 255, 1)
+  );
+  background-repeat: no-repeat;
+}
+
+.part2aboutdiv,
+.part2summarydiv {
+  flex: 1 1 45%;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#part2 h2 {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  margin-bottom: 1rem;
+}
+
+#part2 p {
+  font-size: clamp(1rem, 2.5vw, 1.4rem);
+  line-height: 1.6;
+}
+
+/* section 4 - author or extra info */
+#part4 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  min-height: 80vh;
+  padding: 2rem;
+  background-image: linear-gradient(
+    to top,
+    rgba(255, 255, 255, 1),
+    rgba(117, 187, 201, 0.5),
+    rgba(255, 255, 255, 1)
+  );
+  background-repeat: no-repeat;
+}
+
+#part4 article {
+  flex: 1 1 300px;
+  margin: 1rem;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  color: rgb(73, 72, 72);
+  transition: transform 0.3s ease;
+}
+
+#part4 article:hover {
+  transform: translateY(-5px);
 }
