@@ -2,7 +2,7 @@
 
 a narrative adventure website
 
-s## **🧪 A narrative adventure website:**
+## **🧪 A narrative adventure website:**
 
 Are you a fan of telling tales by the fire while snowing around you? Create a narrative adventure! Display the story bit by bit, so the user keeps clicking on the next button to read it all!
 
