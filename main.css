@@ -1,0 +1,46 @@
+@import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Playfair Display", serif;
+}
+h1,
+h2,
+p {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+/* Responsive font sizes using clamp */
+h1 {
+  font-weight: 700;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+}
+
+h2 {
+  font-weight: 600;
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+p,
+a {
+  font-weight: 400;
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+}
+
+section {
+  background-image: linear-gradient(
+    to top,
+    rgba(255, 255, 255, 1),
+    rgba(117, 187, 201, 1),
+    rgba(255, 255, 255, 1)
+  );
+  background-repeat: no-repeat;
+
+  min-height: 100%vh;
+  min-width: 100%vw;
+}

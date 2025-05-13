@@ -1,72 +1,3 @@
-// //adding a daily quote
-
-// //fetch api
-// //step 1 getapi
-
-// // here code in env
-
-// async function getApi() {
-//   const response = await fetch(url, options);
-//   console.log(response);
-//   if (!response.ok) {
-//     throw new Error("Network response was not ok");
-//   }
-
-//   let quote = "no quote available",
-//     author = "unknown";
-
-//   try {
-//     const result = await response.json();
-//     quote = result.text;
-//     author = result.author || "unknown";
-//   } catch (error) {
-//     console.error(error);
-//     const datanew = await response.text();
-//     const parts = datanew.split(" - ");
-//     quote = parts[0];
-//     author = parts.length > 1 ? parts[1] : "Unknown";
-//   }
-
-//   return { quote, author };
-// }
-
-// //step 2 create element and append
-
-// const quoteContainer = document.getElementById("quoteApi");
-
-// function displayQuoteContent(quote, author) {
-//   const quoteParagraph = document.createElement("p");
-//   const authorPart = document.createElement("h4");
-
-//   quoteParagraph.textContent = quote;
-//   authorPart.textContent = author;
-
-//   quoteContainer.appendChild(quoteParagraph);
-//   quoteContainer.appendChild(authorPart);
-// }
-
-// //step 3 combine
-
-// async function displayQuote() {
-//   // Get the quote and author from the API
-//   const { quote, author } = await getApi();
-//   //display it using the quote function
-//   displayQuoteContent(quote, author);
-// }
-// //call final function to initiate it
-// displayQuote();
-
-//added a settimeout so when the time reaches zero the quoteContainer will appear
-setTimeout(function () {
-  quoteContainer.style.display = "flex";
-}, 2000);
-
-//logo to appear after 2seconds
-const logo = document.getElementById("logo");
-setTimeout(function () {
-  logo.style.display = "block";
-}, 2000);
-
 //storing objects
 
 let novelTitle = "Percy Jackson and the olympians: The Lightning Thief";
@@ -95,7 +26,7 @@ function part1Elements() {
   const heading = document.createElement("h1");
   heading.textContent = novelTitle;
 
-  const author = document.createElement("h3");
+  const author = document.createElement("h2");
   author.textContent = "Rick Riordan";
 
   const link = document.createElement("a");
